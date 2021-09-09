@@ -1,5 +1,10 @@
 numeros = int(input("Digite os numeros sorteados: "))
 lista = []
+
+#
+# TUDO ERRADO, meno ali
+#
+
 #Separa o numero grande de 2 em 2 digitos
 while(numeros > 0):
     #Separa os 2 ultimos digitos pelo resto do numero todo por 100
