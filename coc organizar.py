@@ -28,13 +28,16 @@ def main():
         win.mainloop()
         winm.destroy()
     
-            
-    winm = Tk()
+        
+    try:
+        winm = Tk()
+        winm.iconphoto(True, tk.PhotoImage(file='icon.png'))
+    except:
+        winm.destroy()
+        winm = Tk()
 
     winm.title("AutoPC")
     winm.geometry("425x150+100+100")
-    winm.iconphoto(True, tk.PhotoImage(file='icon.png'))
-
 
     lb = Label(winm, text="Welcome to AutoPC\n\n\n\nType the numbers to organize")
     lb.place(x=130,y=40)
