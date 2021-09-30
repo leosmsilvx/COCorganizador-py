@@ -10,6 +10,9 @@ def main():
         
         win.title("AutoPC")
         win.geometry("765x150+100+100")
+
+        canvas = tk.Canvas(win, height=1000, width=1000, bg="#4f4f4f")
+        canvas.pack()
         
         lista = []
         num = int(ed.get())
@@ -19,10 +22,10 @@ def main():
             lista.append(addlista)
 
         lista.sort(key=int)
-        numbers = Label(win, text="Organized numbers:\n{}".format(str(lista)[1:-1])) # To remove the brackets
+        numbers = Label(win, bg="#4f4f4f", fg="#eee",text="Organized numbers:\n{}".format(str(lista)[1:-1])) # To remove the brackets
         numbers.place(x=60,y=20)
 
-        bto = Button(win, width=10, text="Ok", command=win.destroy)
+        bto = Button(win, width=10, text="Ok", command=win.destroy, bg="#4f4f4f", fg="#eee")
         bto.place(x=334, y=90)
 
         win.mainloop()
@@ -39,14 +42,17 @@ def main():
     winm.title("AutoPC")
     winm.geometry("425x150+100+100")
 
-    lb = Label(winm, text="Welcome to AutoPC\n\n\n\nType the numbers to organize")
+    canvas = tk.Canvas(winm, height=1000, width=1000, bg="#4f4f4f")
+    canvas.pack()
+    
+    lb = Label(winm, text="Welcome to AutoPC\n\n\n\nType the numbers to organize", bg="#4f4f4f", fg="#eee")
     lb.place(x=130,y=40)
 
-    ed = Entry(winm)
+    ed = Entry(winm, bg="#707070", fg="#eee")
     ed.place(x=110,y=70)
     ed.focus_force()
 
-    bto = Button(winm, width=6, text="Ok", command=organize)
+    bto = Button(winm, width=6, text="Ok", command=organize, bg="#707070", fg="#eee")
     bto.place(x=240, y=67)
 
     winm.mainloop()
